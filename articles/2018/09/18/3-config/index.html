@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta author="">
+    <meta description="">
+    <meta keywords="">
+    <title> 配置 -  Seeruo文档</title>
+    <link rel="shortcut icon" href="/static/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/srsearch/srsearch.css">
+    <script type="text/javascript" src="/static/srsearch/srsearch.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="sibar">
+            <div class="logo">
+                <a href="/">Seeruo文档</a>
+                <small>< 轻量化静态网站构建工具 ></small>
+            </div>
+            <div class="menu">
+                <ul class="mul" style="margin-left: 20px;">
+                                    <li><a href="/articles/2018/09/19/2-instal"
+                         >
+                        安装</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/18/3-config"
+                         class="active"  >
+                        配置</a>
+                         
+                            <ul class="mul" style="margin-left: 30px;">
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#1.网站基础配置 (必填)">1.网站基础配置 (必填)</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#2.本地调试配置">2.本地调试配置</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#3.发布到服务器[阿里云]">3.发布到服务器[阿里云]</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#4.发布到Git[Github pages]">4.发布到Git[Github pages]</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#5.单页文件配置">5.单页文件配置</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#6.文章里面的配置">6.文章里面的配置</a></li>
+                                                        </ul>
+                                            </li>
+                                    <li><a href="/articles/2018/09/17/4-console"
+                         >
+                        命令</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/16/5-plugin"
+                         >
+                        插件</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/15/6-themes"
+                         >
+                        主题</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/14/7-end"
+                         >
+                        结束</a>
+                                            </li>
+                                </ul>
+            </div>
+            
+            <div class="links">
+                <a target="_blank" href="http://seeruo.codegrids.com">Sr</a>
+                <a target="_blank" href="https://github.com/seeruo"><i class="fa fa-github"></i></a>
+                <a target="_blank" href="mailto:cdking95@gmail.com"><i class="fa fa-envelope-o"> </i></a>
+                <a><i class="fa fa-search" id="searchDiv"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="markdown-body">
+                <link rel="stylesheet" type="text/css" href="/static/srwords/srwords.css">
+<style type="text/css">
+    #SeeruoWords{
+        margin-top: 50px;
+    }
+</style>
+<div class="content-block">
+	<section>
+				<h2>配置</h2>
+		
+		<p>您可以在 Config/config.php 修改配置。</p><h4><a name='1.网站基础配置 (必填)' title='1.网站基础配置 (必填)'></a>1.网站基础配置 (必填)</h4><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>title</td><td>网站标题</td></tr><tr><td>author</td><td>作者</td></tr><tr><td>url</td><td>网站基础地址</td></tr><tr><td>themes</td><td>网站主题(模版选择)</td></tr><tr><td>page_limit</td><td>网站分页用到的每页条数</td></tr><tr><td>license</td><td>文章版权信息</td></tr></tbody></table><h4><a name='2.本地调试配置' title='2.本地调试配置'></a>2.本地调试配置</h4><p>如果需要本地调试，需要配置这些配置项，也可以不用配置，系统会使用默认配置：</p><table><thead><tr><th>参数</th><th>说明</th><th>默认</th></tr></thead><tbody><tr><td>server_address</td><td>本地调试地址</td><td>'127.0.0.1',</td></tr><tr><td>server_port</td><td>本地调试短裤</td><td>'9001',</td></tr><tr><td>auto_open</td><td>是否自动打开浏览器</td><td>true,</td></tr></tbody></table><h4><a name='3.发布到服务器[阿里云]' title='3.发布到服务器[阿里云]'></a>3.发布到服务器[阿里云]</h4><p>网站构建完成并调试成功之后，需要把网站发布到云服务器，需要配置如下配置项：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>ssh_user</td><td>云服务器账号</td></tr><tr><td>ssh_address</td><td>云服务器地址</td></tr><tr><td>ssh_path</td><td>存放网站代码的根目录</td></tr></tbody></table><h4><a name='4.发布到Git[Github pages]' title='4.发布到Git[Github pages]'></a>4.发布到Git[Github pages]</h4><p>网站构建完成并调试成功之后，需要把网站发布到云服务器，需要配置如下配置项：</p><table><thead><tr><th>参数</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>git_address</td><td>git仓库地址</td><td>git@github.com:seeruo/seeruo.github.io.git</td></tr><tr><td>git_log_file</td><td>操作日志存放文件名</td><td>git_log.log</td></tr></tbody></table><h4><a name='5.单页文件配置' title='5.单页文件配置'></a>5.单页文件配置</h4><p>有的时候，我们需要单独设置一个页面，方便页面布局（可控）</p><p><strong>使用markdown文件作为主页</strong></p><table><thead><tr><th>参数</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>home_page</td><td>markdown文件地址</td><td>home.md</td></tr><tr><td>single_pages</td><td>一个数组</td><td>['about'=&gt;'about.md']</td></tr></tbody></table><p>系统会自动替换主页文件为 ‘home.md’ 解析之后的 ‘html’ 页面</p><p><strong>使用markdown文件作为其他页面,需要配置single_pages，参数如下</strong></p><table><thead><tr><th>参数</th><th>说明</th><th>示例</th><th>解析之后的URL</th></tr></thead><tbody><tr><td>about</td><td>markdown文件地址</td><td>单页/about.md</td><td><a href="http://www.example.com/about">http://www.example.com/about</a></td></tr><tr><td>linker</td><td>markdown文件地址</td><td>单页/linker.md</td><td><a href="http://www.example.com/linker">http://www.example.com/linker</a></td></tr></tbody></table><p>这里的参数可以设置为任意的英文+数字的字符串</p><h4><a name='6.文章里面的配置' title='6.文章里面的配置'></a>6.文章里面的配置</h4><p>markdown文件的配置项参数：</p><pre><code class="language-markdown">title: 配置
+type: Seeruo
+date: 2018-09-18
+tags: Seeruo,blog,静态博客构建工具</code></pre><table><thead><tr><th>参数</th><th>说明</th><th>必填</th><th>默认</th></tr></thead><tbody><tr><td>title</td><td>文章标题</td><td>是</td><td>‘’</td></tr><tr><td>type</td><td>文章分类，如果有多个分类，请以英文‘,’分隔开(分类,测试)</td><td>否</td><td>默认读取文章所属的文件夹名称</td></tr><tr><td>date</td><td>文章发布时间(2018-10-10)</td><td>否</td><td>建议手工指定时间， 默认当前构建时间</td></tr><tr><td>tags</td><td>文章标签，如果有多个分类，请以英文‘,’分隔开(标签,测试)</td><td>否</td><td>‘’</td></tr><tr><td>author</td><td>作者</td><td>否</td><td>默认读取配置文件里面设置的author字段</td></tr><tr><td>linker</td><td>文章链接</td><td>否</td><td>默认当前链接</td></tr><tr><td>license</td><td>文章版权</td><td>否</td><td>默认读取配置文件里面设置的license字段</td></tr></tbody></table><p>如果你的模版需求其他的字段，可以按这种规则继续添加字段</p><pre><code class="language-markdown">...
+tags: Seeruo,blog,静态博客构建工具
+param1: test1
+param2: test2</code></pre><p>到这里，所有配置已经完成了，可以开始使用了^_^...</p>
+
+				<blockquote class="author_block">
+			<ul>
+				<li>本文作者: Danier(左浪)</li>
+				<li>本文链接: http://seeruo.codegrids.com/articles/2018/09/18/3-config</li>
+				<li>版权声明: 本博客所有文章除特别声明外，转载请注明出处！</li>
+			</ul>
+		</blockquote>
+		<div id="SeeruoWords"></div>
+		
+	</section>
+    <script type="text/javascript" src="/static/srwords/srwords.js"></script>
+	<script type="text/javascript">
+		/**
+		 * [onload 页面加载完成之后，执行插件初始化]
+		 * @DateTime 2018-09-23
+		 * @return   {[type]}   [description]
+		 */
+		document.querySelector('body').onload= function () {
+			SrWords('#SeeruoWords')
+		}
+	</script>
+</div>
+            </div>
+        </div>
+    </main>
+    <script src="/static/prism/prism.js"></script>
+    <script type="text/javascript">
+        function goto(e){
+            var c = document.querySelectorAll('.cmenu');
+            c.forEach(function(item,i){
+                item.classList.remove("cactive");
+            });
+            e.classList.add("cactive");
+        }
+        SrSearch('#searchDiv',{
+            apiBase:"https://seeruo.github.io/articles"
+        })
+    </script>
+</body>
+</html>

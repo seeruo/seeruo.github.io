@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta author="">
+    <meta description="">
+    <meta keywords="">
+    <title> 主题 -  Seeruo文档</title>
+    <link rel="shortcut icon" href="/static/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/srsearch/srsearch.css">
+    <script type="text/javascript" src="/static/srsearch/srsearch.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="sibar">
+            <div class="logo">
+                <a href="/">Seeruo文档</a>
+                <small>< 轻量化静态网站构建工具 ></small>
+            </div>
+            <div class="menu">
+                <ul class="mul" style="margin-left: 20px;">
+                                    <li><a href="/articles/2018/09/19/2-instal"
+                         >
+                        安装</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/18/3-config"
+                         >
+                        配置</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/17/4-console"
+                         >
+                        命令</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/16/5-plugin"
+                         >
+                        插件</a>
+                                            </li>
+                                    <li><a href="/articles/2018/09/15/6-themes"
+                         class="active"  >
+                        主题</a>
+                         
+                            <ul class="mul" style="margin-left: 30px;">
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#系统自带参数说明">系统自带参数说明</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#default主题">default主题</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#document主题 ">document主题 </a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#srnote主题 ">srnote主题 </a></li>
+                                                        </ul>
+                                            </li>
+                                    <li><a href="/articles/2018/09/14/7-end"
+                         >
+                        结束</a>
+                                            </li>
+                                </ul>
+            </div>
+            
+            <div class="links">
+                <a target="_blank" href="http://seeruo.codegrids.com">Sr</a>
+                <a target="_blank" href="https://github.com/seeruo"><i class="fa fa-github"></i></a>
+                <a target="_blank" href="mailto:cdking95@gmail.com"><i class="fa fa-envelope-o"> </i></a>
+                <a><i class="fa fa-search" id="searchDiv"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="markdown-body">
+                <link rel="stylesheet" type="text/css" href="/static/srwords/srwords.css">
+<style type="text/css">
+    #SeeruoWords{
+        margin-top: 50px;
+    }
+</style>
+<div class="content-block">
+	<section>
+				<h2>主题</h2>
+		
+		<p>Seeruo的主题，用户可以自己开发<br>开发需要用的参数主要有3部分：</p><ul><li>markdown文件里面必须配置的参数，你可以参考配置相关的<a href="/articles/2018/09/18/3-config#6.文章里面的配置">第6项</a></li><li>markdown文件里面用户自定义的参数，</li><li>系统自带的一些参数</li></ul><h4><a name='系统自带参数说明' title='系统自带参数说明'></a>系统自带参数说明</h4><p>这里只对系统自带参数做一些说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>web_title</td><td>文章主标题</td></tr><tr><td>content</td><td>解析过后的文章内容</td></tr><tr><td>articles_file_index</td><td>文章索引，包含了子索引，是数组</td></tr><tr><td>articles_type_index</td><td>文章类型索引，是数组</td></tr><tr><td>page_uuid</td><td>当前文章的唯一标识</td></tr><tr><td>page_uuid_type</td><td>所有分类的标识的集合，是一纬数组</td></tr><tr><td>page_uuid_type_now</td><td>文章当前分类所在位置的唯一标识</td></tr></tbody></table><p>articles_file_index、articles_type_index包含的参数</p><table><thead><tr><th>参数</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>title</td><td>标题</td></tr><tr><td>href</td><td>链接</td></tr><tr><td>uuid</td><td>唯一标识</td></tr><tr><td>child</td><td>子索引</td></tr></tbody></table><p>目前的提供了三套主题，用户也可以自己制作自己的主题模版；<br>主题模版采用的是twig模版引擎设计；熟悉twig的用户，可以轻易的设计出自己喜欢的主题。<br>提供的三套主题种，使用的风格是一样的，都是仿造hexo-theme-yilia制作的主题，只是在于侧重点不同：</p><h4><a name='default主题' title='default主题'></a>default主题</h4><p><strong>这套主题，基本符合传统的博客系统风格，侧重点在文章的时间归档</strong><br><img src="/static/images/default.png" alt="default" title="default"></p><h4><a name='document主题' title='document主题'></a>document主题</h4><p><strong>这套模版主页用于文档展示，本说明文档，就是采用的这套模版</strong><br><img src="/static/images/document.png" alt="document" title="document"></p><h4><a name='srnote主题' title='srnote主题'></a>srnote主题</h4><p><strong>这套模版主要用于类似笔记的展示，侧重点在文章的分类归档</strong><br><img src="/static/images/srnote.png" alt="srnote" title="srnote"></p>
+
+				<blockquote class="author_block">
+			<ul>
+				<li>本文作者: Danier(左浪)</li>
+				<li>本文链接: http://seeruo.codegrids.com/articles/2018/09/15/6-themes</li>
+				<li>版权声明: 本博客所有文章除特别声明外，转载请注明出处！</li>
+			</ul>
+		</blockquote>
+		<div id="SeeruoWords"></div>
+		
+	</section>
+    <script type="text/javascript" src="/static/srwords/srwords.js"></script>
+	<script type="text/javascript">
+		/**
+		 * [onload 页面加载完成之后，执行插件初始化]
+		 * @DateTime 2018-09-23
+		 * @return   {[type]}   [description]
+		 */
+		document.querySelector('body').onload= function () {
+			SrWords('#SeeruoWords')
+		}
+	</script>
+</div>
+            </div>
+        </div>
+    </main>
+    <script src="/static/prism/prism.js"></script>
+    <script type="text/javascript">
+        function goto(e){
+            var c = document.querySelectorAll('.cmenu');
+            c.forEach(function(item,i){
+                item.classList.remove("cactive");
+            });
+            e.classList.add("cactive");
+        }
+        SrSearch('#searchDiv',{
+            apiBase:"https://seeruo.github.io/articles"
+        })
+    </script>
+</body>
+</html>

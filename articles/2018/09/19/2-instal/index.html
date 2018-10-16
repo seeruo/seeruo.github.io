@@ -5,7 +5,7 @@
     <meta author="">
     <meta description="">
     <meta keywords="">
-    <title> 关于 -  Seeruo文档</title>
+    <title> 安装 -  Seeruo文档</title>
     <link rel="shortcut icon" href="/static/images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
@@ -24,8 +24,15 @@
             <div class="menu">
                 <ul class="mul" style="margin-left: 20px;">
                                     <li><a href="/articles/2018/09/19/2-instal"
-                         >
+                         class="active"  >
                         安装</a>
+                         
+                            <ul class="mul" style="margin-left: 30px;">
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#前置要求">前置要求</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#1.通过包管理器(Composer)安装（推荐）">1.通过包管理器(Composer)安装（推荐）</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#2.通过Git下载脚手架">2.通过Git下载脚手架</a></li>
+                                                            <li><a style="font-size: 12px" onclick="goto(this)" class="cmenu" href="#目录结构">目录结构</a></li>
+                                                        </ul>
                                             </li>
                                     <li><a href="/articles/2018/09/18/3-config"
                          >
@@ -67,15 +74,28 @@
 </style>
 <div class="content-block">
 	<section>
-				<h2>关于</h2>
+				<h2>安装</h2>
 		
-		<h4><a name='Seeruo介绍' title='Seeruo介绍'></a>Seeruo介绍</h4><p>Seeruo是一个用php开发的用于快速构建静态博客(文档、笔记)的极简框架工具。使用markdown语法书写文章，用命令行模式构建静态文件，并上传至GitHub Pages或云服务器。</p><p>Seeruo具有如下特性：</p><ul><li>简单易用</li><li>快速构建</li><li>本地预览</li><li>一键发布</li></ul><p>Seeruo的开发初衷是为了用php开发一个博客系统，接触了hexo之后，吸收了hexo的一些特性，并用php开发了这套框架。<br>Seeruo陪备了基础框架，可以直接使用；也可以通过直接require框架的方式使用。</p><h4><a name='版本说明' title='版本说明'></a>版本说明</h4><p>截止10.13日，Seeruo1.0版本基本功能开发完毕，可以暂时投入使用。</p><h4><a name='快速开始' title='快速开始'></a>快速开始</h4><pre><code class="language-shell">[~]# composer create-project seeruo/seeruo myblog
-[~]# cd myblog
-[App]# cd myblog/App
-[App]# php seeruo create test
-[App]# php seeruo build
-[App]# php seeruo server</code></pre><p>更多使用细则，请参考详细使用手册。</p>
+		<p>Seeruo提供了多种安装方式，你可以根据你的情况使用；</p><h4><a name='前置要求' title='前置要求'></a>前置要求</h4><p>php &gt;= 5.6</p><h4><a name='1.通过包管理器(Composer)安装（推荐）' title='1.通过包管理器(Composer)安装（推荐）'></a>1.通过包管理器(Composer)安装（推荐）</h4><p>SeeRuo提供了基础脚手架，可以直接用php包管理工具直接生成项目结构。</p><pre><code class="language-shell">composer create-project seeruo/seeruo myblog</code></pre><h4><a name='2.通过Git下载脚手架' title='2.通过Git下载脚手架'></a>2.通过Git下载脚手架</h4><p>如果你没有安装Composer，可以直接下载： <a href="https://codeload.github.com/seeruo/seeruo/zip/master">下载地址</a></p><p>也可以通过Git clone下载：</p><pre><code class="language-shell">git clone git@github.com:seeruo/seeruo.git</code></pre><h4><a name='目录结构' title='目录结构'></a>目录结构</h4><p>安装完成之后，项目的目录结构应该是</p><pre><code class="language-shell">myblog
+    |-App
+        |-Config  // 配置文件目录
+            |-config.php 
+        |-Plugins // 插件目录
+        |-Source  // 资源文件存放目录
+        |-Themes  // 主题目录
+    |-vendor</code></pre><p>App目录名可以随便修改，比如说我有多个项目，一个博客blog，一个文档document，那么我的目录结构为</p><pre><code class="language-shell">myblog
+    |-blog      // 这是博客项目，修改App目录名称而来
+    |-document  // 这是文档项目，完全拷贝blog的一个新项目
+    |-vendor</code></pre>
 
+				<blockquote class="author_block">
+			<ul>
+				<li>本文作者: Danier(左浪)</li>
+				<li>本文链接: http://seeruo.codegrids.com/articles/2018/09/19/2-instal</li>
+				<li>版权声明: 本博客所有文章除特别声明外，转载请注明出处！</li>
+			</ul>
+		</blockquote>
+		<div id="SeeruoWords"></div>
 		
 	</section>
     <script type="text/javascript" src="/static/srwords/srwords.js"></script>
